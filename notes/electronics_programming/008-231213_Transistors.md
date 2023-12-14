@@ -1,4 +1,4 @@
-# 008-231213
+# 008-231213: Transistors
 
 ```
 AC 220V
@@ -23,13 +23,13 @@ AC 220V
                    -
 *DC only
 ```
-- AC -> [Bridge Circuit](notes\004-231207_Memory_Electronics.md)  -> switch -> DC -> Motor
+- AC -> [Bridge Circuit](notes\electronics_programming\004-231207_Memory_Electronics.md)  -> switch -> DC -> Motor
 - put diodes next to relays to aborb surge voltages
 - DC motor changes rotation by changing +-
 - 5V 225 Ohm, 10V 1k Ohm are usual resistance values for voltages
 
 ## Using oscilloscopes
-![Oscilloscope in action](../assets/oscilloscope.png)
+![Oscilloscope in action](../../assets/oscilloscope.png)
 - Function generators make AC, can be measured with oscilloscopes
   
 
