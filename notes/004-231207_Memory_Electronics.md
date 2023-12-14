@@ -53,12 +53,21 @@ Source:
 Source: https://cafe.naver.com/eljet/7
 		
 ## Bridge circuit
+![Bridge circuit](<../assets/Copy of Bridge circuit.png>)
+- are just 4 diodes put together in the same direction
+- diode 통과시 0.7V 전압강화 발생
+- enables led to light up even if the source power's +- flips.
+- 브리지 다이오드 구매시 몇 amp 필요한지 알아야함
 
 ## H Bridge circuit
+![H bridge Unbalanced](../assets/hbridge_on.png)
+![H Bridge Balanced](../assets/hbridge_off.png)
 Akin to how water is (theoretically) static in between two blocks when water flows through two parallel blocks. No voltage is measured in the horizontal part.
+=> If diagonal multiples of resistors are equal, LEDs in the middle don't turn on.
 
 - when/where is it used?
 https://wiraelectrical.com/h-bridge-circuit/
+
 
 
 		
