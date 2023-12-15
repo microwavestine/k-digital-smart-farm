@@ -23,6 +23,21 @@ Source: https://html.alldatasheet.com/html-pdf/64198/HITACHI/HM6264/745/3/HM6264
 
 ## Diodes
 ![Diodes](../../assets/diodes.PNG)
+```
+diode in circuit diagram looks like
+the current flows -> this way
+anode                  cathode
+            xx     x
+            xxx    x
+            x xxx  x
+            x   xx x
+ xxxxxxxxxxxx    xxxxxxxxxxxxx
+            x    xxx
+            x  xxx x
+            x xx   x
+            xx     x
+```
+used ascii flow to generate ascii diagram
 Despite being nothing more than a simple two-pin semiconductor devices, diodes are vital to modern electronics. Some of their most common applications include turning AC to DC, isolating signals from a supply, and mixing signals.
 
 Diodes can be used as rectifiers, signal limiters, voltage regulators, switches, signal modulators, signal mixers, signal demodulators, and oscillators. **The fundamental property of a diode is its tendency to conduct electric current in only one direction.**
