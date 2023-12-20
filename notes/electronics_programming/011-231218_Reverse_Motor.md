@@ -16,6 +16,7 @@ https://www.reddit.com/r/explainlikeimfive/comments/5kshcq/eli5_in_a_series_circ
 ![Reversing motor with 6 pin switch](../../assets/reverse-motor-6-pin-switch.png)
 ![Reversing motor with 6 pin swith + on off switch](../../assets/reverse-motor-6-pin-switch_withonoffswitch.png)
 [Relay - DC Motor schematics; reverse motor direction with relay](../../kicad/reversing_motor_direction)
+![Reversing motor with 6 pin switch IRL](../../assets/reverse_motor_direction_6_pin_switch.jpeg)
 
 - Magnetic switch for high load (30-40 Amps load of switch and motors)
 - DPDT relay switch for low load (~5 Amps) -> 보통 비닐하우스 개폐기

@@ -5,6 +5,8 @@
 - 전류는 저항에 비례해서 흐름. 고로 걸리는 전압도 다름.
 - In a series circuit where two resistors share the same node, start and end voltage is the same.
 ![Show how transistor controls leds](../../assets/transistor_onoffled.PNG)
+![How transistor works through current control](../../assets/transistor_led_current_control.jpeg)
+- LED turns on when holding white and yellow lines with fingers
 ![Reverse motor direction when push button is pressed](../../assets/relay_reverse_motor_button.PNG)
 
 
