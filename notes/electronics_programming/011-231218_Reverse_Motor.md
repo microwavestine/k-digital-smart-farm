@@ -30,5 +30,9 @@ https://relaypros.com/choosing_proper_amperage.htm
 
 https://www.instructables.com/All-You-Need-to-Know-About-Relays/
 
+https://howtomechatronics.com/tutorials/arduino/control-high-voltage-devices-arduino-relay-tutorial/
+
+https://electronics.stackexchange.com/questions/330441/what-the-different-values-written-on-relay-mean
+
 ## Python
 - can find integer part of division with `//` operator. ` 7//4 = 1`

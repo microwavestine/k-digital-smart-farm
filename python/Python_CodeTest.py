@@ -1,15 +1,29 @@
 # -*- coding: cp949 -*- 
-# 1. 문자열 바꾸기 (needs review)
+# 1. 문자열 바꾸기
 a = "a:b:c:d"
 a_result = ",".join(a.split(":"))
 print("#1 answer is " + a_result)
 
-# 2. 딕셔너리 값 추출하기(needs review)
+# 2. 딕셔너리 값 추출하기
+"""
+.get method returns None if the key doesn't exist. dict['C'] would throw error.
+use .get('somekey', 'default value') to return default value when there's no key.
+"""
 dict = {'A':90, 'B':80}
-dict.get('C', 70)
+dict.get('C', 70) 
 print("#2 answer is")
 print(dict)
 
+# 3. 리스트에서 + 로 concat 하기 vs extend 로 하기
+"""
+a = [1,2]
+id(a) <- find address of array
+using a += [3,4] allocates new memory space and saves concatenated array there, then labels it as "a".
+
+a.extend([3,4])
+does not allocate new memory space, just adds the elements into the existing memory address holding the list.
+
+"""
 
 # 4. 리스트 총합 구하기
 grades = [20,55,67,82,45,33,90,87,100,25]

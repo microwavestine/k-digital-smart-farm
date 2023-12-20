@@ -36,6 +36,8 @@ anode                  cathode
             x  xxx x
             x xx   x
             xx     x
+therefore led
++ goes here 		  - goes here
 ```
 used ascii flow to generate ascii diagram
 Despite being nothing more than a simple two-pin semiconductor devices, diodes are vital to modern electronics. Some of their most common applications include turning AC to DC, isolating signals from a supply, and mixing signals.
