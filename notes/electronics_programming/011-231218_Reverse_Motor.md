@@ -1,4 +1,4 @@
-# 011-231218: Reversing Motors, Relays, Python
+# 011-231218: Reversing Motors, Relays
 
 ## Position of resistor does not matter in general
 In general (that is, almost always) the location of a component in a series connection does not matter.  The exceptions generally have to do with the relationship of the part to other components as mediated by considerations that don't show up on schematics. It becomes important when there are multiple paths for current to travel in a circuit. If you need to control the path of current, or the value of voltage at a certain node, then the resistor placement (and value) becomes important.
@@ -34,6 +34,3 @@ https://www.instructables.com/All-You-Need-to-Know-About-Relays/
 https://howtomechatronics.com/tutorials/arduino/control-high-voltage-devices-arduino-relay-tutorial/
 
 https://electronics.stackexchange.com/questions/330441/what-the-different-values-written-on-relay-mean
-
-## Python
-- can find integer part of division with `//` operator. ` 7//4 = 1`

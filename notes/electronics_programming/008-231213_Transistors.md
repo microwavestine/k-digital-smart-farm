@@ -45,7 +45,9 @@ AC 220V
 - 적은 전류로 작동 가능
 - hfe 증폭비율 = collector current / base current
 - FET = field effect transistor = 전압으로 제어 (전류 소모 거의 없음)
+  - HC series
 - BJT = bipolar junction transistor = 전류로 제어
+  - LS series
 
 ### How do you identify FET and BJT?
 BJT has three configurations: common emitter (CE), common base (CB) and common collector (CC). FET also has three configurations: common source (CS), common gate (CG) and common drain (CD). FET is comparatively smaller in size.
