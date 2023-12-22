@@ -68,7 +68,49 @@ for i in range(1,10):
     print(int(multiplier_input) * i, end=" ")
 
 # 8. 파일을 읽어 역순으로 저장하기
+# lines = []
+# with open("C:\\Users\\farm17\\Documents\\GitHub\\k-digital-smart-farm\\python\\8.txt") as reverse_file_open:
+#     lines = reverse_file_open.readlines()
+#     lines.reverse()
+
+# with open("C:\\Users\\farm17\\Documents\\GitHub\\k-digital-smart-farm\\python\\8_ans.txt", "w") as reverse_file_write:
+#     for line in lines:
+#         line = line.strip()
+#         reverse_file_write.write(line)
+#         reverse_file_write.write("\n")
 
 
 
 # 9. 평균값 구하기
+    
+
+# 14. 문자열 압축하기
+"""
+입력: aaabbcccccca
+출력: a3b2c6a1
+"""
+def compress_string(compress_input):
+    if not compress_input:
+        return ""
+
+    compress_output = ""
+    char_count = 1
+
+    for i in range(1, len(compress_input)):
+        char = compress_input[i]
+        prev_char = compress_input[i - 1]
+
+        if char == prev_char:
+            char_count += 1
+        else:
+            compress_output += prev_char + str(char_count)
+            char_count = 1
+
+        if i == len(compress_input) - 1:
+            compress_output += char + str(char_count)
+
+    return compress_output
+
+compress_input = input("압축할 문자열을 입력하세요: ")
+result = compress_string(compress_input)
+print(result)
