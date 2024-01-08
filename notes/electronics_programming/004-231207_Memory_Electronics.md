@@ -26,7 +26,7 @@ Source: https://html.alldatasheet.com/html-pdf/64198/HITACHI/HM6264/745/3/HM6264
 ```
 diode in circuit diagram looks like
 the current flows -> this way
-anode                  cathode
+anode(+)                  cathode(-)
             xx     x
             xxx    x
             x xxx  x
