@@ -1,14 +1,5 @@
 # 004 - 231207: Memory and electronics
 
-# C Programming Basics
-- atoi() turns string into int
-	- need `#include <stdlib.h>`
-- can escape percentage sign by `%%`
-- array is in the format of `int arr[10] = { 1, 2, 3...}`;
-- array length is `int arrLength = sizeof(arr) / sizeof(arr[0]);`
-- can find memory address by `printf("%p", &arr[0])`
-	- an outdated way to express it is `*arr` = `&arr[0]` or `*arr + 1` = `&arr[1]`
-
 # Computer Memory
 - In the page 3 of data sheet for HM6264, the block diagram shows how memory works in terms of hardware.
 	- A4 ~ 11 is where address is called by name

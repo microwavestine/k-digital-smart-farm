@@ -1,5 +1,19 @@
-# 002 - 231205: Basics
-	
+# 002 - Basics
+
+# 전기 기초
+- Ohm's Law V = IR
+- 도선의 저항은 0 Ohm 으로 가정한다.
+- 온도에 따라 저항이 약간 달라진다.
+
+Given
+- 5V Power
+- 2V Diode
+- 225 Ohm Resistance (3V)
+I = V/R = 3 / 225 = 0.01 Amp flowing through resistance
+
+- P = VI(t)
+- Therefore P = 2V * 0.01 Amp for the diode
+
 # Basic Knowledge
 - \r\n = CRLF = 0D0A
 	- Carriage Return; returns cursor to front then move to new line
@@ -8,6 +22,10 @@
 - Any values beside 0 is treated as true in C.
 - Bipolar junction transistor is the first transistor and made with Gallium
 - further developed into (MOS)FET (field effect transistor) with n and p channels.
+- You can't run motors without relays and transistors (or any semiconducting materials), or the board will burn
+- AC 220V 60 hz is standard in South Korea
+	- generator has a turbine that turns to generate electricity
+	- the generator turbine turns 60 times per second = 60 Hz
 
 # 논리 회로
 - Quad NAND/NOR/AND... Gate = 4 logics in one chip
