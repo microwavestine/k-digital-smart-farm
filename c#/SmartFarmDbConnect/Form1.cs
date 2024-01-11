@@ -19,9 +19,12 @@ namespace SmartFarmDbConnect
 {
     public partial class Form1 : Form
     {
-        public static Tuple<SshClient, uint> ConnectSsh(string sshHostName, string sshUserName, string sshPassword = null,
+        public static Tuple<SshClient, uint> ConnectSsh(string sshHostName = "127.0.0.1", string sshUserName = "vagrant", string sshPassword = null,
             string sshKeyFile = null, string sshPassPhrase = null, int sshPort = 2222, string databaseServer = "localhost", int databasePort = 3306)
         {
+            // change sshKeyFile here
+            sshKeyFile = System.Environment.GetEnvironmentVariable("SSH_KEY_FILE");
+
             // check arguments
             if (string.IsNullOrEmpty(sshHostName))
                 throw new ArgumentException($"{nameof(sshHostName)} must be specified.", nameof(sshHostName));
@@ -56,6 +59,24 @@ namespace SmartFarmDbConnect
             return new Tuple<SshClient, uint>(sshClient, forwardedPort.BoundPort);
         }
 
+        public static MySqlConnection ConnectDB(uint localPort)
+        {
+            var databaseUserName = System.Environment.GetEnvironmentVariable("DB_USERNAME");
+            var databasePassword = System.Environment.GetEnvironmentVariable("DB_PASSWORD");
+
+            MySqlConnectionStringBuilder csb = new MySqlConnectionStringBuilder
+            {
+                Server = "127.0.0.1",
+                Port = localPort,
+                Database = "smartfarm",
+                UserID = databaseUserName,
+                Password = databasePassword,
+            };
+
+
+            return new MySqlConnection(csb.ConnectionString);
+        }
+
         public Form1()
         {
             DotNetEnv.Env.TraversePath().Load();
@@ -66,28 +87,15 @@ namespace SmartFarmDbConnect
 
         public void InsertUpdate()
         {
-            var server = "127.0.0.1";
-            var sshUserName = "vagrant";
-            var sshKeyFile = System.Environment.GetEnvironmentVariable("SSH_KEY_FILE");
-            var databaseUserName = System.Environment.GetEnvironmentVariable("DB_USERNAME");
-            var databasePassword = System.Environment.GetEnvironmentVariable("DB_PASSWORD");
-
-            Tuple<SshClient, uint> sshResult = ConnectSsh(server, sshUserName, null, sshKeyFile);
+            Tuple<SshClient, uint> sshResult = ConnectSsh();
             SshClient sshClient = sshResult.Item1;
             uint localPort = sshResult.Item2;
 
             using (sshClient)
             {
-                MySqlConnectionStringBuilder csb = new MySqlConnectionStringBuilder
-                {
-                    Server = "127.0.0.1",
-                    Port = localPort,
-                    Database = "smartfarm",
-                    UserID = databaseUserName,
-                    Password = databasePassword,
-                };
+                MySqlConnection connectDB = ConnectDB(localPort);
 
-                using (MySqlConnection connection = new MySqlConnection(csb.ConnectionString))
+                using (MySqlConnection connection = connectDB)
                 {
                     string date = DateTime.Now.ToString();
                     connection.Open();
@@ -96,6 +104,30 @@ namespace SmartFarmDbConnect
                 }
             }
         }
+
+        public void Delete()
+        {
+            Tuple<SshClient, uint> sshResult = ConnectSsh();
+            SshClient sshClient = sshResult.Item1;
+            uint localPort = sshResult.Item2;
+
+            using (sshClient)
+            {
+                MySqlConnection connectDB = ConnectDB(localPort);
+
+                using (MySqlConnection connection = connectDB)
+                {
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM gp2y10 WHERE (no > 3)", connection);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        /**
+         * Event Methods
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             InsertUpdate();
