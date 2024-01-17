@@ -1,13 +1,12 @@
-#include <Wire.h>
-boolean toggle_state = false;
+#include <Wire.h> 
 void setup() {
-  Wire.begin(); // join I2C bus (address optional for master)
-}
-
-void loop() {
-  Wire.beginTransmission(8); // transmit to device #8
-  Wire.write(toggle_state);              // sends one byte
-  Wire.endTransmission();    // stop transmitting
-  toggle_state = !toggle_state; 
-  delay(1000);
+	Wire.begin(8); 
+	Wire.onRequest(requestEvent); 
+} 
+void loop() { 
+	delay(100);
+} 
+void requestEvent() 
+{ 
+	Wire.write("01B23A456B789A "); // 마스터에게보낼데이터
 }
