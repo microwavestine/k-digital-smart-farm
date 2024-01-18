@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO.Ports;
+using System.IO;
 namespace Building
 {
-    class Building
-    {
-        public int Area;
-        public int BuildingArea()
-        {
-            return Area * 10;
-        }
-    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Building house = new Building();
-            house.Area = 1000;
-            Console.WriteLine(house.BuildingArea());
+            string[] strs = { "one", "two", "three", "two", "one" };
+
+            foreach (string s in strs)
+            {
+                switch (s)
+                {
+                    case "one":
+                        Console.Write(1);
+                        break;
+                    case "two":
+                        Console.Write(2);
+                        break;
+                    case "three":
+                        Console.Write(3);
+                        break;
+                }
+            }
+            Console.WriteLine();
         }
     }
+
 }
