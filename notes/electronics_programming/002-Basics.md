@@ -27,6 +27,8 @@ I = V/R = 3 / 225 = 0.01 Amp flowing through resistance
 	- generator has a turbine that turns to generate electricity
 	- the generator turbine turns 60 times per second = 60 Hz
 
+https://thecircuitmaker.com/voltage-drop-across-resistors/#What_is_a_Series_Circuit
+
 # 논리 회로
 - Quad NAND/NOR/AND... Gate = 4 logics in one chip
 - XOR = 1 & 0 = true. 1 & 1 or 0 & 0 is false.
