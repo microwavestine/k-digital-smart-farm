@@ -1,40 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO.Ports;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-namespace Building
+﻿// A very simple event demonstration.
+using System;
+// Declare a delegate type for an event.
+delegate void MyEventHandler();
+// Declare a class that contains an event.
+class MyEvent
 {
-    class TwoDShape
+    // public MyEventHandler SomeEvent;
+    public event MyEventHandler SomeEvent;
+    // This is called to raise the event.
+    public void OnSomeEvent()
     {
-        public double Width;
-        public double Height;
-
-        // Constructor for TwoDShape.
-        public TwoDShape(double w, double h)
-        {
-            Width = w;
-            Height = h;
-        }
-    }
-    class Triangle : TwoDShape
-    {
-        public string Style;
-        // Call the base class constructor.
-        public Triangle(string s, double w, double h) : base(w, h)
-        {
-            Style = s;
-        }
-    }
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Triangle t1 = new Triangle("isosceles", 4.0, 4.0);
-            Console.WriteLine(t1.Width + " " + t1.Height + " " + t1.Style);
-        }
+        if (SomeEvent != null)
+            SomeEvent();
     }
 }
-[출처] Base 클래스에 초기값 전달하기 (IT메카닉스) | 작성자 eljet
+class EventDemo
+{
+    // An event handler.
+    static void Handler()
+    {
+        Console.WriteLine("Event occurred");
+    }
+
+    static void Handler2()
+    {
+        Console.WriteLine("Event occured2");
+    }
+
+    static void Handler3()
+    {
+        Console.WriteLine("Event occured3");
+    }
+
+    static void Main()
+    {
+        MyEvent evt = new MyEvent();
+        // Add Handler() to the event list.
+        evt.SomeEvent += Handler;
+        // Raise the event.
+        //evt.SomeEvent();
+        evt.OnSomeEvent();
+    }
+}
