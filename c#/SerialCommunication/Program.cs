@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO.Ports;
-using System.IO;
-namespace Building
+
+namespace SerialCommunication
 {
     internal class Program
     {
         static int count = 0;
         static void Main(string[] args)
         {
-            SerialPort sp = new SerialPort("COM3", 9600);
-          
-            sp.DtrEnable = true;
+            SerialPort sp = new SerialPort("COM7", 9600);
+
+            // sp.DtrEnable = true;
 
             // Source: https://www.youtube.com/watch?v=PwT2KwJkMKQ
 

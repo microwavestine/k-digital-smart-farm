@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{922D72CF-7DA0-4FAD-B12F-9B767EC7012C}</ProjectGuid>
+    <ProjectGuid>{43F69E8A-99C9-4A0C-8698-0A22A01B200A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Example</RootNamespace>
-    <AssemblyName>Example</AssemblyName>
+    <RootNamespace>SerialCommunication</RootNamespace>
+    <AssemblyName>SerialCommunication</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Counter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
