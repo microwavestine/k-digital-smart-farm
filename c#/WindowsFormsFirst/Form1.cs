@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,8 +15,9 @@ namespace WindowsFormsFirst
     public partial class Form1 : Form
 
     {
-        private int deltaY = 5;
+        private int deltaY = 50;
         private bool visible = true;
+        private int count = 0;
         public Form1()
         {
 
@@ -24,6 +27,11 @@ namespace WindowsFormsFirst
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            ++count;
+            DateTime dt = DateTime.Now;
+
+            label2.Text = dt.ToString();
 
             int newTop = pictureBox4.Top + deltaY;
 
@@ -95,5 +103,6 @@ namespace WindowsFormsFirst
             myForm.StartPosition = this.StartPosition;
             myForm.ShowDialog();
         }
+
     }
 }
