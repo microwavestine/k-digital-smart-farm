@@ -1,30 +1,32 @@
+"""
+고정: 프로그래머는 각 조에 1명씩 배치
+2. 선택 작물 > 같이하고 싶은 사람
+"""
+
+
+
+
 import random
 programmers = ["조세호", "정규", "김영식", "이가은", "장환희"]
 classmates = ["김홍식", "이진우", "김도훈", "윤대권", "이인규", "정재건", "박정", "고은별", "김세웅", "오재돈"]
 
-## 엽채류
-## 허브류
-preferred_crops = [(),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   (),
-                   ()]
-# group by preferences first
-
-# shuffle programmers around randomly to fit the groups
-
-# normalize group member distribution
-
-# personal preferences
+## 엽채류 - 프릴아이스, 버터헤드, 로메인
+## 허브류 - 스위트바질, 애플민트, 레몬밤
+## 약용작물 - 인삼
+preferred_crops = [{},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {},
+                   {}]
 
 random_classmate = random.randrange(0, 11)

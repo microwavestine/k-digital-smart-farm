@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,94 +16,43 @@ namespace WindowsFormsFirst
     public partial class Form1 : Form
 
     {
-        private int deltaY = 50;
-        private bool visible = true;
-        private int count = 0;
+        private List<Point> ls;
+
         public Form1()
         {
 
             InitializeComponent();
+            ls = new List<Point>();
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
-            ++count;
-            DateTime dt = DateTime.Now;
-
-            label2.Text = dt.ToString();
-
-            int newTop = pictureBox4.Top + deltaY;
-
-            // Check if the image is going out of the form's bounds
-            if (newTop < 0)
-            {
-                newTop = 0;
-                deltaY = -deltaY; // Reverse the direction when reaching the top
-            }
-            else if (newTop + pictureBox4.Height > ClientSize.Height)
-            {
-                newTop = ClientSize.Height - pictureBox4.Height;
-                deltaY = -deltaY; // Reverse the direction when reaching the bottom
-            }
-            pictureBox4.Top = newTop;
         }
 
-        private void Form1_Activated(object sender, EventArgs e)
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            while(visible == true)
-            {
-                for (int c = 0; c < 254 && visible == true; ++c)
-                {
-                    this.BackColor = System.Drawing.Color.FromArgb(c, 255 - c, 0);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(3);
-                }
+            Point p = new Point(e.X, e.Y);
+            ls.Add(p);
+            this.Invalidate();
+        }
 
-                for (int c = 254; c >= 0 && visible == true; --c)
-                {
-                    this.BackColor = System.Drawing.Color.FromArgb(c, 255 - c, 0);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(3);
-                }
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Console.WriteLine("이벤트 발생");
+            Graphics g = e.Graphics;
+            Pen dp = new Pen(Color.Black, 1);
+            foreach (Point p in ls)
+            {
+                g.DrawEllipse(dp, p.X, p.Y, 20, 20);
+                Rectangle rt = new Rectangle();
+                rt.X = p.X;
+                rt.Y = p.Y;
+                rt.Width = 150;
+                rt.Height = 50;
+                g.DrawRectangle(dp, rt);
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            visible = false;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            visible = true;
-            while (visible == true)
-            {
-                for (int c = 0; c < 254 && visible == true; ++c)
-                {
-                    this.BackColor = System.Drawing.Color.FromArgb(c, 255 - c, 0);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(3);
-                }
-
-                for (int c = 254; c >= 0 && visible == true; --c)
-                {
-                    this.BackColor = System.Drawing.Color.FromArgb(c, 255 - c, 0);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(3);
-                }
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Form myForm = new Form();
-            myForm.Width = this.Width;
-            myForm.Height = this.Height;
-            myForm.StartPosition = this.StartPosition;
-            myForm.ShowDialog();
-        }
-
     }
 }
