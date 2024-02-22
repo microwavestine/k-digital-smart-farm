@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsFirst", "WindowsFormsFirst.csproj", "{D7094AE1-E9C6-4E33-8871-C3FDB1F05BA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkingExample", "NetworkingExample.csproj", "{8F2783CC-02FE-4F9F-B418-C8624CD47F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7094AE1-E9C6-4E33-8871-C3FDB1F05BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7094AE1-E9C6-4E33-8871-C3FDB1F05BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7094AE1-E9C6-4E33-8871-C3FDB1F05BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7094AE1-E9C6-4E33-8871-C3FDB1F05BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2783CC-02FE-4F9F-B418-C8624CD47F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2783CC-02FE-4F9F-B418-C8624CD47F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2783CC-02FE-4F9F-B418-C8624CD47F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2783CC-02FE-4F9F-B418-C8624CD47F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0D241592-124F-455A-A28B-B2F0A3F74920}
+		SolutionGuid = {9BBA1B4E-ADAB-414A-B10B-5F05A04A513E}
 	EndGlobalSection
 EndGlobal

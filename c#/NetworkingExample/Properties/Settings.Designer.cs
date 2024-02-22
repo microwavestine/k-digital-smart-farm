@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsFirst.Properties
+namespace NetworkingExample.Properties
 {
 
 

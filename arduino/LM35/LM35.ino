@@ -4,7 +4,7 @@ int lm35Pin = A0;
 
 void setup()  
 {
-    analogReference(INTERNAL);
+    analogReference(AR_INTERNAL);
     Serial.begin(9600);
 }
 
