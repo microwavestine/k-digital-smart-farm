@@ -1,3 +1,6 @@
+// NTCLE413E2103F102L thermistor
+
+
 int ThermistorPin = 0;
 int Vo;
 float R1 = 10000;
@@ -14,12 +17,11 @@ void loop() {
   R2 = R1 * (1023.0 / (float)Vo - 1.0);
   logR2 = log(R2);
   T = (1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2));
-  T = T - 273.15;  // 섭시
-  // T = (T * 9.0)/ 5.0 + 32.0;  // 섭시를 화씨로 바꾸는 공식 
+  T = T - 273.15;
 
   Serial.print("Temperature: "); 
   Serial.print(T);
-  Serial.println(" C"); 
+  Serial.println(" C");   
 
   delay(500);
 }
