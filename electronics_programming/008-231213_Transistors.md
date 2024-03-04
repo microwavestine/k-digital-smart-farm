@@ -29,7 +29,7 @@ AC 220V
 - 5V 225 Ohm, 10V 1k Ohm are usual resistance values for voltages
 
 ## Using oscilloscopes
-![Oscilloscope in action](../../assets/oscilloscope.png)
+![Oscilloscope in action](../assets/oscilloscope.png)
 - Function generators make AC, can be measured with oscilloscopes
   
 
@@ -38,6 +38,7 @@ AC 220V
 
 
 ## Transistor
+![Transistor in a silicon](../assets/transistor_graphics.PNG) source: https://ig.ft.com/microchips/
 - made of base, collector, emitter
 - 신호 증폭 작용 하기 위함
 - 전류가 흐르면  on, 없으면 off
