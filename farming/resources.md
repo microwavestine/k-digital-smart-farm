@@ -1,3 +1,9 @@
+# 도농인력중개플랫폼
+https://www.agriwork.kr/front/main/index.do 농업 일자리 정보
+
+# 모두가 도시 농부
+https://www.modunong.or.kr:449/home/kor/intro.do 도시농업 정보 (텃밭 등), 도시농업관리사 자격
+
 # 모두의 텃밭
 https://everyonesgarden.vercel.app/ 주변 텃밭 분양 알아보기
 
@@ -9,6 +15,9 @@ https://uni.agrix.go.kr/webportal/main/portalIndex.do?web=in 청년농업인 영
 
 # 흙토람
 https://soil.rda.go.kr/soil/index.jsp 토양환경정보
+
+# 농업과학도서
+https://lib.rda.go.kr/main.do
 
 # 농사로
 https://www.nongsaro.go.kr/portal/portalMain.ps 농업자재, 기술 등 여러 정보
@@ -64,7 +73,3 @@ https://www.ecf-farm.de/en
 ### 농업경영체 등록
 - 시설 / 농업 토지 면적 100평 이상만 가능
 - 등록하지 않을 경우 온라인 판매만 가능, 농업인 혜택 받지 못함
-
-
-
-  
