@@ -1,3 +1,25 @@
+
+# Farm equipments, shop
+- [농달](https://nongdal.co.kr/)
+## 종자, 씨앗
+- http://www.mifkoseed.kr/index.php
+- https://garamone.com/
+- http://www.asiaseed.net/
+## 시설
+- https://hbjoint.com/html/main.php 한보 일렉트
+- 금성에이스 - sells pipe rack made with steel and abs coating
+## 센서, 컨트롤러
+- http://www.manzak.kr/
+- 정량 (도징) 펌프로 양액 혼합
+  - TUYA-릴레이 스마트 스위치 와이파이 원격 제어
+  - https://ko.aliexpress.com/store/5041265?spm=a2g0o.detail.0.0.104cBOcnBOcnTe
+  - TUYA water quality ph sensor
+  - need a third pump to control ph
+## LED
+- http://farmbioled.com/
+- https://fluence-led.com/
+
+
 # 도농인력중개플랫폼
 https://www.agriwork.kr/front/main/index.do 농업 일자리 정보
 
@@ -22,10 +44,7 @@ https://lib.rda.go.kr/main.do
 # 농사로
 https://www.nongsaro.go.kr/portal/portalMain.ps 농업자재, 기술 등 여러 정보
 
-# 종자, 씨앗
-- http://www.mifkoseed.kr/index.php
-- https://garamone.com/
-- http://www.asiaseed.net/
+
 
 # 국가농작물병해충관리시스템
 https://ncpms.rda.go.kr/npms/Main.np
@@ -33,21 +52,17 @@ https://ncpms.rda.go.kr/npms/Main.np
 # 김포시 농업 기술 센터
 https://www.gimpo.go.kr/agri/index.do
 
-# 시설
-- https://hbjoint.com/html/main.php 한보 일렉트
-- 금성에이스 - sells pipe rack made with steel and abs coating
+# 스마트팜코리아
+https://www.smartfarmkorea.net/main.do
 
-## LED
-- http://farmbioled.com/
-- https://fluence-led.com/
+# 농업 교육 포털
+https://agriedu.net/
 
-## 센서, 컨트롤러
-- http://www.manzak.kr/
-- 정량 (도징) 펌프로 양액 혼합
-  - TUYA-릴레이 스마트 스위치 와이파이 원격 제어
-  - https://ko.aliexpress.com/store/5041265?spm=a2g0o.detail.0.0.104cBOcnBOcnTe
-  - TUYA water quality ph sensor
-  - need a third pump to control ph
+
+
+
+
+
 ## PPFD
 https://m.blog.naver.com/ifiu/220513140103
 
@@ -68,6 +83,7 @@ https://m.blog.naver.com/ifiu/220513140103
 
 https://www.letsgrow.com/
 https://www.fbn.com/
+
 https://www.ecf-farm.de/en
 
 ### 농업경영체 등록

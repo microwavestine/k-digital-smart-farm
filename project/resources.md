@@ -1,3 +1,30 @@
+# 스마트팜 실습 부품 목록
+- 4채널 아두이노 30A 릴레이모듈			
+- [동아]분전반용 누전차단기_DEH32Ab			
+- 노출콘센트 접지 220V 2구			
+- [한영넉스]유리관 휴즈 홀더 HY-F15-3A			
+- [한영넉스]유리관 휴즈 홀더 HY-F15-2A			
+- 유리관휴즈 6Φ (중) (10EA)			
+- [용성] 용성전기 찬넬			
+- [래치원]단자대 스토퍼 1조 (2ea)			
+- [다메이커]PG압착단자 Y타입[1봉 / 소포장]			
+- [다메이커]PG압착단자 Y타입[1봉 / 소포장]			
+- SUS 고정식 단자대 20A 12P			
+- SUS 고정식 단자대 20A 4P			
+- 쇼트바 6P-25A			
+- 2.5sq 배전반 단선 100m			
+- 에스엔씨 VCTF 전선 2.5SQ 3C 100M			
+- 전기플러그			
+- 분전반 케이스(300x400x150mm)			
+- 아두이노우노 r4			
+- 민웰 SMPS RS-15-12 DC12V 1.3A 파워서플라이			
+- DC잭 플러그-2.5파이			
+- 아두이노 방수 온도센서 (DS18b20)	
+- 접지부스바 1열 절곡형, SG-EB-3P~20P	
+- 케이블그랜드/PG콘넥터/PVC콘넥터	
+
+https://esphome.io/
+
 # TIL: AWS IoT does not work with Uno R4 Wifi
 https://forum.arduino.cc/t/how-to-connect-mqtt-with-tls-for-arduino-r4-wifi/1173463/3
 
