@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B579668-5FA7-47EB-B791-647EF30CB429}</ProjectGuid>
+    <ProjectGuid>{576D34BD-199D-4F52-B148-DC97743165CF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SmartFarmDashboard</RootNamespace>
-    <AssemblyName>SmartFarmDashboard</AssemblyName>
+    <RootNamespace>WindowsDataGridView</RootNamespace>
+    <AssemblyName>WindowsDataGridView</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,7 +38,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
