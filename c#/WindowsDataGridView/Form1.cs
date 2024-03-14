@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsDataGridView.Properties;
 
@@ -65,25 +64,19 @@ namespace WindowsDataGridView
             List<string> parsedTimetable = new List<string>(timetable);
             String[] parsedTimetableArray = parsedTimetable.ToArray();
 
-            List<string[]> rowSets = new List<string[]>();
+            Dictionary<string, string> timeKeyOnOffSettingValuePairs = new Dictionary<string, string>();
 
             for (int i = 0; i < parsedTimetableArray.Length; i++)
             {
                 String[] arr = parsedTimetableArray[i].Split('=');
-                List<string> list = new List<string>();
-                list.Add(arr[0]);
-                list.Add(arr[1]);
-                String[] listArr = list.ToArray();
-                rowSets.Add(listArr);
+                timeKeyOnOffSettingValuePairs.Add(arr[0], arr[1]);
             }
 
-            String[][] rowSetsArray = rowSets.ToArray();
-
-           for (int i = 0; i < rowSetsArray.Length; i++) {
-
+            foreach(string time  in timeKeyOnOffSettingValuePairs.Keys)
+            {
                 DataRow dr = dt.NewRow();
-                dr[0] = rowSetsArray[i][0];
-                dr[1] = rowSetsArray[i][1];
+                dr[0] = time;
+                dr[1] = timeKeyOnOffSettingValuePairs[time];
                 dt.Rows.Add(dr);
             }
             dataGridView1.DataSource = dt;
