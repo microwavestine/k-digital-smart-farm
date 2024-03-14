@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,18 @@ namespace WindowsDataGridView
 {
     public partial class Form1 : Form
     {
+
+        [DllImport("kernel32")]
+        public static extern bool WritePrivateProfileString(string AppName, string KeyName, string KeyData, string FileName);
+
+        [DllImport("kernel32")]
+        public static extern int GetPrivateProfileString(string AppName, string KeyName, string Default, StringBuilder ReturnValue, int nSize, string FileName);
+
+        public string MY_HOUSE_DAT = Environment.CurrentDirectory + "\\house.dat";
+
+        public const string DELIM = "_";
+
+        
         DataTable dt = new DataTable();
         string[] defaultTimetable = _24HourTable();
 
@@ -49,26 +62,30 @@ namespace WindowsDataGridView
         public void parseTimetableIntoDataView(string[] timetable)
         {
 
-            List<string> parsedTimetable = new List<string>();
-
-            for (int i = 0; i < timetable.Length; i++) {
-                string[] arr = timetable[i].Split('=');
-                parsedTimetable.Add(arr[0]);
-                parsedTimetable.Add(arr[1]);
-            }
-
+            List<string> parsedTimetable = new List<string>(timetable);
             String[] parsedTimetableArray = parsedTimetable.ToArray();
 
-            Console.WriteLine(parsedTimetableArray.ToString());
-
-            DataRow dr = dt.NewRow();
+            List<string[]> rowSets = new List<string[]>();
 
             for (int i = 0; i < parsedTimetableArray.Length; i++)
             {
-                dr[i] = parsedTimetableArray[i];
+                String[] arr = parsedTimetableArray[i].Split('=');
+                List<string> list = new List<string>();
+                list.Add(arr[0]);
+                list.Add(arr[1]);
+                String[] listArr = list.ToArray();
+                rowSets.Add(listArr);
             }
 
-            dt.Rows.Add(dr);
+            String[][] rowSetsArray = rowSets.ToArray();
+
+           for (int i = 0; i < rowSetsArray.Length; i++) {
+
+                DataRow dr = dt.NewRow();
+                dr[0] = rowSetsArray[i][0];
+                dr[1] = rowSetsArray[i][1];
+                dt.Rows.Add(dr);
+            }
             dataGridView1.DataSource = dt;
         }
 
@@ -80,7 +97,7 @@ namespace WindowsDataGridView
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter("DefaultTable.dat");
+/*            StreamWriter sw = new StreamWriter("DefaultTable.dat");
 
             int mulminute = 0;
             for (int hour = 0; hour < 24; ++hour)
@@ -94,7 +111,12 @@ namespace WindowsDataGridView
                     sw.WriteLine(strHour + ":" + strMinute + "=" + "ON");
                 }
             }
-            sw.Close();
+            sw.Close();*/
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

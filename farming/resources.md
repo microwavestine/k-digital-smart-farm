@@ -1,6 +1,7 @@
 
 # Farm equipments, shop
 - [농달](https://nongdal.co.kr/)
+- https://www.nidopro.com/ all in one 재배 kit
 ## 종자, 씨앗
 - http://www.mifkoseed.kr/index.php
 - https://garamone.com/
@@ -8,6 +9,7 @@
 ## 시설
 - https://hbjoint.com/html/main.php 한보 일렉트
 - 금성에이스 - sells pipe rack made with steel and abs coating
+- http://ilsinfarm.co.kr/kr/index.html gutters, 포스맥
 ## 센서, 컨트롤러
 - http://www.manzak.kr/
 - 정량 (도징) 펌프로 양액 혼합
