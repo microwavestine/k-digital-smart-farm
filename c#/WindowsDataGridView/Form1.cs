@@ -6,8 +6,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 using WindowsDataGridView.Properties;
 
 namespace WindowsDataGridView
@@ -72,13 +74,24 @@ namespace WindowsDataGridView
                 timeKeyOnOffSettingValuePairs.Add(arr[0], arr[1]);
             }
 
-            foreach(string time  in timeKeyOnOffSettingValuePairs.Keys)
+            foreach(var time in timeKeyOnOffSettingValuePairs.Keys.Select((val, index) => (val, index)))
             {
                 DataRow dr = dt.NewRow();
-                dr[0] = time;
-                dr[1] = timeKeyOnOffSettingValuePairs[time];
+                dr[0] = time.val; // 00:00
+                dr[1] = timeKeyOnOffSettingValuePairs[time.val]; // ON/OFF
                 dt.Rows.Add(dr);
+                if ((string)dr[1] == "ON")
+                {
+                    dataGridView1.Rows[time.index].Cells[1].Value = "ON";
+                    dataGridView1.Rows[time.index].Cells[1].Style.BackColor = Color.Green;
+                }
+                if ((string)dr[1] == "OFF")
+                {
+                    dataGridView1.Rows[time.index].Cells[1].Value = "OFF";
+                    dataGridView1.Rows[time.index].Cells[1].Style.BackColor = Color.DarkGray;
+                }
             }
+            
             dataGridView1.DataSource = dt;
         }
 
@@ -90,26 +103,50 @@ namespace WindowsDataGridView
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-/*            StreamWriter sw = new StreamWriter("DefaultTable.dat");
+            string house_name = textBox1.Text;
 
-            int mulminute = 0;
-            for (int hour = 0; hour < 24; ++hour)
+            StreamWriter sw = new StreamWriter(house_name + ".dat");
+
+            for(int i =0; i < dt.Rows.Count; i++)
             {
-                string strHour = hour.ToString("00");
-                for (int minute = 0; minute < 12; ++minute)
-                {
-                    mulminute = minute * 5;
-                    string strMinute = mulminute.ToString("00");
-                    Console.WriteLine(strHour + ":" + strMinute + "=" + "ON");
-                    sw.WriteLine(strHour + ":" + strMinute + "=" + "ON");
-                }
+                sw.WriteLine(dt.Rows[i][0] + "=" + dt.Rows[i][1]);
             }
-            sw.Close();*/
+
+            sw.Close();
         }
 
         private void loadButton_Click(object sender, EventArgs e)
         {
 
+            List<string> savedInfo = new List<string>();
+            try
+            {
+                // Create a StreamReader
+                using (StreamReader reader = new StreamReader(textBox1.Text+".dat"))
+                {
+                    string line;
+                    // Read line by line
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        savedInfo.Add(line);
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
+
+            string[] savedInfoArray = savedInfo.ToArray();
+            parseTimetableIntoDataView(savedInfoArray);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string arg = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            if (arg == "ON") { dataGridView1.Rows[e.RowIndex].Cells[1].Value = "OFF"; dataGridView1.Rows[e.RowIndex].Cells[1].Style.BackColor = Color.DarkGray; }
+            if (arg == "OFF") { dataGridView1.Rows[e.RowIndex].Cells[1].Value = "ON"; dataGridView1.Rows[e.RowIndex].Cells[1].Style.BackColor = Color.Green; }
         }
     }
 

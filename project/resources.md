@@ -23,6 +23,11 @@
 - 접지부스바 1열 절곡형, SG-EB-3P~20P	
 - 케이블그랜드/PG콘넥터/PVC콘넥터	
 
+(For holding boards on the side of racks)
+- 금성에이스
+  - STS Pipe, S2807*2MT 27.6mm x t0.7mm x 2m
+
+
 https://esphome.io/
 
 # TIL: AWS IoT does not work with Uno R4 Wifi
