@@ -74,7 +74,7 @@ namespace WindowsFourthServerClient
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Server_Start_Click(object sender, EventArgs e)
         {
             IsSystemExit = true;
 
@@ -190,7 +190,7 @@ namespace WindowsFourthServerClient
 
 
         //================   클라이언트 관련   ================// 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_Client_Start_Click(object sender, EventArgs e)
         {
             // 클라이언트 프로그램 입니다
             try
@@ -229,7 +229,7 @@ namespace WindowsFourthServerClient
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void serverStop_Click(object sender, EventArgs e)
         {
             IsSystemExit = false;
 
@@ -282,7 +282,7 @@ namespace WindowsFourthServerClient
             }
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void buttonIpSave_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter("IP.txt");
             sw.WriteLine(txt_Server_IP.Text.Trim());
@@ -290,5 +290,6 @@ namespace WindowsFourthServerClient
             sw.WriteLine(txt_Name.Text.Trim());
             sw.Close();
         }
+
     }
 }

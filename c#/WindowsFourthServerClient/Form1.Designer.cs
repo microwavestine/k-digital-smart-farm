@@ -30,7 +30,7 @@
         {
             this.btn_Server_Start = new System.Windows.Forms.Button();
             this.btn_Client_Start = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.serverStop = new System.Windows.Forms.Button();
             this.txt_Msg = new System.Windows.Forms.TextBox();
             this.txt_Chat = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.txt_ChatS = new System.Windows.Forms.TextBox();
             this.txt_MsgS = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonIpSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Server_Start
@@ -52,7 +52,7 @@
             this.btn_Server_Start.TabIndex = 0;
             this.btn_Server_Start.Text = "Server";
             this.btn_Server_Start.UseVisualStyleBackColor = true;
-            this.btn_Server_Start.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Server_Start.Click += new System.EventHandler(this.btn_Server_Start_Click);
             // 
             // btn_Client_Start
             // 
@@ -63,17 +63,17 @@
             this.btn_Client_Start.TabIndex = 1;
             this.btn_Client_Start.Text = "Client";
             this.btn_Client_Start.UseVisualStyleBackColor = true;
-            this.btn_Client_Start.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Client_Start.Click += new System.EventHandler(this.btn_Client_Start_Click);
             // 
-            // button3
+            // serverStop
             // 
-            this.button3.Location = new System.Drawing.Point(937, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 61);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.serverStop.Location = new System.Drawing.Point(937, 131);
+            this.serverStop.Name = "serverStop";
+            this.serverStop.Size = new System.Drawing.Size(103, 61);
+            this.serverStop.TabIndex = 2;
+            this.serverStop.Text = "button3";
+            this.serverStop.UseVisualStyleBackColor = true;
+            this.serverStop.Click += new System.EventHandler(this.serverStop_Click);
             // 
             // txt_Msg
             // 
@@ -160,22 +160,22 @@
             this.button4.TabIndex = 11;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // buttonSave
+            // buttonIpSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(937, 36);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(103, 53);
-            this.buttonSave.TabIndex = 12;
-            this.buttonSave.Text = "IP SAVE";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonIpSave.Location = new System.Drawing.Point(937, 36);
+            this.buttonIpSave.Name = "buttonIpSave";
+            this.buttonIpSave.Size = new System.Drawing.Size(103, 53);
+            this.buttonIpSave.TabIndex = 12;
+            this.buttonIpSave.Text = "IP SAVE";
+            this.buttonIpSave.UseVisualStyleBackColor = true;
+            this.buttonIpSave.Click += new System.EventHandler(this.buttonIpSave_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 623);
-            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonIpSave);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txt_Server_IP);
             this.Controls.Add(this.txt_NameS);
@@ -185,7 +185,7 @@
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.txt_Chat);
             this.Controls.Add(this.txt_Msg);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.serverStop);
             this.Controls.Add(this.btn_Client_Start);
             this.Controls.Add(this.btn_Server_Start);
             this.Name = "Form1";
@@ -199,7 +199,7 @@
 
         private System.Windows.Forms.Button btn_Server_Start;
         private System.Windows.Forms.Button btn_Client_Start;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button serverStop;
         private System.Windows.Forms.TextBox txt_Msg;
         public  System.Windows.Forms.TextBox txt_Chat;
         private System.Windows.Forms.TextBox txt_Name;
@@ -209,7 +209,7 @@
         public System.Windows.Forms.TextBox txt_ChatS;
         private System.Windows.Forms.TextBox txt_MsgS;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonIpSave;
     }
 }
 
